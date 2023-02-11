@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { databaseConfig } from './config/database.config';
 import { CommonModule } from './common/common.module';
+import { RoleModule } from './role/role.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { CommonModule } from './common/common.module';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync(databaseConfig),
     ProductCategoryModule,
+    RoleModule,
     CommonModule,
   ],
   controllers: [AppController],
