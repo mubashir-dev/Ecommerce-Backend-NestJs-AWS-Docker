@@ -9,7 +9,7 @@ import { S3Service } from 'src/common/s3.service';
 import { ProductCategoryService } from 'src/product-category/product-category.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Product]), ProductCategoryModule, CommonModule],
+imports: [TypeOrmModule.forFeature([Product]), ProductCategoryModule, CommonModule],
   controllers: [ProductController],
   providers: [ProductService, S3Service, ProductCategoryService]
 })
