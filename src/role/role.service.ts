@@ -66,4 +66,10 @@ export class RoleService {
     }
     return this.roleRepository.remove(role);
   }
+
+  async validate(id: number) {
+    return this.roleRepository.findOne({
+      where: { id }
+    })
+  }
 }
